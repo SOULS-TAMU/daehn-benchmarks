@@ -1,7 +1,7 @@
 # Shared-engine library revisions used for benchmark preparation checks.
-purin @ git+https://github.com/SOULS-TAMU/Purin.git@44386de51f65a1eb893ce85f1201b40b7a191734
-ohagi @ git+https://github.com/SOULS-TAMU/Ohagi.git@4403d17cacb8be3a72426f307719bdfb8e736a92
-daehn @ git+https://github.com/SOULS-TAMU/dae-hardnet.git@3f82bd464e068fa12d7715d27c7726b8592003f5
+purin @ git+https://github.com/SOULS-TAMU/Purin.git@971af6614166d13309a83c1140f36e28d13e483d
+ohagi @ git+https://github.com/SOULS-TAMU/Ohagi.git@65beffeb2e26d90af147d01c36b3daa2e47e947f
+daehn @ git+https://github.com/SOULS-TAMU/dae-hardnet.git@b51ff2f09b621519ec586f3bd9d4c74c979c3d75
 numpy>=1.26
 scipy>=1.11
 pandas>=2.1
