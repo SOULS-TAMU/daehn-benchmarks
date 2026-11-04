@@ -1,0 +1,76 @@
+{
+  "backbone": {
+    "class": "TimeScaledMLPBackbone",
+    "kwargs": {
+      "activation": "tanh",
+      "coordinate_min": 0.0,
+      "coordinate_scale": 1000.0,
+      "hidden_sizes": [
+        64,
+        64,
+        64,
+        64
+      ],
+      "state_scales": [
+        46.200000000018726,
+        1.0,
+        1.0
+      ]
+    }
+  },
+  "batch_size": 32,
+  "case_script": "17_catalysis_dae_daehn.py",
+  "checkpoint_file": "parameter_tree.pkl",
+  "checkpoint_sha256": "cac6481c86b9f846174f09132881f1bc2630714e57e69cee03eed27f6da4e02b",
+  "derivative_steps": [
+    1.0
+  ],
+  "epochs": 5000,
+  "evaluation_data_file": "evaluation_data.npz",
+  "evaluation_data_sha256": "8a0d7f997e49508401d23387efb594f421257301dc2958a08c69da48b2f12409",
+  "example": 17,
+  "hidden_sizes": [
+    64,
+    64,
+    64,
+    64
+  ],
+  "history_file": "training_history.json",
+  "model": "mlp",
+  "model_display": "MLP",
+  "parameter_leaf_count": 10,
+  "plot_layout": "auto",
+  "plot_state_names": [
+    "y1",
+    "y2",
+    "y3"
+  ],
+  "plot_transform": "catalysis_physical",
+  "pretrain_epochs": 0,
+  "projected": false,
+  "projection": "none",
+  "run_config_file": "run_config.json",
+  "run_signature": "62fe95f0ea2e90da21d21729417274d1140209971571ca076e0a8258ad540b75",
+  "schema_version": 2,
+  "seed": 44,
+  "split_info": {
+    "horizon_end": 996.9984992496248,
+    "horizon_start": 3.001500750375188,
+    "protocol": "same_horizon",
+    "split_mode": "random",
+    "t1": 3.001500750375188,
+    "t2": 996.9984992496248,
+    "t3": 996.9984992496248
+  },
+  "state_names": [
+    "log_y1",
+    "y2",
+    "y3"
+  ],
+  "status": "trained",
+  "system": "catalysis_physical_dae",
+  "trainer_class": "CatalysisTrainer",
+  "training_wall_seconds": 135.11014699999942,
+  "trajectory_data_file": "trajectory_data.npz",
+  "trajectory_data_sha256": "bbb120e49a1841746913fff2c3e4f8fb6d09f29932b90c68c02ba8bf07a4b366"
+}

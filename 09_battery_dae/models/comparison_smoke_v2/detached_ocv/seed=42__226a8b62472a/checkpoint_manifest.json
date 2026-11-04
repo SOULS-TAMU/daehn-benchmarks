@@ -1,0 +1,23 @@
+{
+  "schema_version": 2,
+  "task": "battery_voltage_forecasting",
+  "model": "detached_ocv",
+  "checkpoint_file": "parameter_tree.pkl",
+  "checkpoint_sha256": "51a4f7a1f74504cbbbf14ad178e0e400476f018fd9c04600696ffa962831c3db",
+  "data_sha256": "20d47aa5039211a4066b72e0d82fc1358247bd9db16aede480447ba947a022fe",
+  "training_wall_seconds": 3.9427737000005436,
+  "epochs_executed": 3,
+  "selected_epoch": 1,
+  "input_contract": "initial SOC/polarization, current profile, times; no future voltage input",
+  "dae_index": 1,
+  "projection": "LinearEqualityProjection",
+  "differential_states": [
+    "soc",
+    "polarization_V"
+  ],
+  "algebraic_states": [
+    "terminal_voltage_V"
+  ],
+  "parameter_count": 109,
+  "activation": "tanh"
+}

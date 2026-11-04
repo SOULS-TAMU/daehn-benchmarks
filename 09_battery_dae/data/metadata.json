@@ -1,0 +1,169 @@
+{
+  "source_doi": "10.5281/zenodo.6323623",
+  "source_checksums": {
+    "CCCV_18A_chg.csv": {
+      "zenodo_md5": "1316bb590326e03d1eec42414a85d76c",
+      "sha256": "f7b4f4e1364a75e5764470ad9ae8d9daa03146194f3b8b9d1faca879aa252576"
+    },
+    "pulsed_chg.csv": {
+      "zenodo_md5": "22d679928f14c192b4b457015cac1fbc",
+      "sha256": "29812b85d9fa65a720f3c0a600c6a2a664154a05cf2af1d366eadbb16d8076c9"
+    },
+    "OCV_SOC_data.csv": {
+      "zenodo_md5": "baa250276f02666b0b17cb7d74c64382",
+      "sha256": "fef0925aebed754299de30e7a19f4ae24c177a7a9401f90eaea64ab82a3b4858"
+    },
+    "CCCV_50A_dis.csv": {
+      "zenodo_md5": "e588421f2bd0b44d211c32171497fcd4",
+      "sha256": "d9fc708e892724a332190f3fc1c7909066d8b88fc5b9a619b01b9cb81bca74de"
+    },
+    "CCCV_180A_chg.csv": {
+      "zenodo_md5": "7b2acde2a1d5b462facf200c1ae470ae",
+      "sha256": "0bec53779781aa805729512ba82c3576b5e3c7694c4a977ae0266814bd608ffb"
+    },
+    "pulsed_dis.csv": {
+      "zenodo_md5": "e8973028b7aed36c37a9a43dc7f30297",
+      "sha256": "6afdfa9be65694b3c918da0e177080bf610ed1d8594e0365cd66e7b692b4a3a6"
+    },
+    "CCCV_180A_dis.csv": {
+      "zenodo_md5": "f983815b764aac7058087a2da473a514",
+      "sha256": "7e8c9fab83affdbe69c9c75b73c6c1bc10ea783753f60add0a8d567ab6710ab1"
+    },
+    "halfcycles.csv": {
+      "zenodo_md5": "9f74aae2d49afa55a754afd6a8f2c0c7",
+      "sha256": "2bc56bda512a3fd3ecc4a4dd3c3ab5d71a3cbcab2303a91ffdfde8d49ef3db99"
+    },
+    "CCCV_18A_dis.csv": {
+      "zenodo_md5": "bdefdfd5b129c0f17a1b5baecbf77612",
+      "sha256": "32aa1d12339e500753a53ba40b2417ac1dbd5844f71a13cbdeaab6f85f703432"
+    },
+    "CCCV_50A_chg.csv": {
+      "zenodo_md5": "a41d7c66be0c77ecc465c64fc4a7dad3",
+      "sha256": "e32d1b08bf810ffd1eaef9dee31a6e8ff16cd9d60912ff043af987edd668799e"
+    },
+    "loadprofile.csv": {
+      "zenodo_md5": "2fa00da4ce60cbae4484ae4fd399a8b5",
+      "sha256": "f017c0ed45c1abf7deaf42f2affbc60002e134a669263a51faf21ec4ab2d1ed7"
+    }
+  },
+  "data_sha256": "20d47aa5039211a4066b72e0d82fc1358247bd9db16aede480447ba947a022fe",
+  "protocols": [
+    {
+      "id": 0,
+      "file": "CCCV_18A_chg.csv",
+      "split": "train",
+      "original_measurements": 4492,
+      "retained_measurements": 4492,
+      "duration_seconds": 41845.53281312971,
+      "initial_soc_from_first_rest_voltage": 0.000886178885390607,
+      "initial_current_A": 0.0
+    },
+    {
+      "id": 1,
+      "file": "CCCV_18A_dis.csv",
+      "split": "train",
+      "original_measurements": 5014,
+      "retained_measurements": 5014,
+      "duration_seconds": 38147.78676147262,
+      "initial_soc_from_first_rest_voltage": 0.9990666844846875,
+      "initial_current_A": 0.0
+    },
+    {
+      "id": 2,
+      "file": "CCCV_180A_chg.csv",
+      "split": "train",
+      "original_measurements": 3120,
+      "retained_measurements": 3120,
+      "duration_seconds": 3935.5178690890025,
+      "initial_soc_from_first_rest_voltage": 0.0009981219152757645,
+      "initial_current_A": 0.0
+    },
+    {
+      "id": 3,
+      "file": "CCCV_180A_dis.csv",
+      "split": "train",
+      "original_measurements": 898,
+      "retained_measurements": 898,
+      "duration_seconds": 3931.551870009993,
+      "initial_soc_from_first_rest_voltage": 0.9991327744390587,
+      "initial_current_A": 0.0
+    },
+    {
+      "id": 4,
+      "file": "pulsed_chg.csv",
+      "split": "train",
+      "original_measurements": 12660,
+      "retained_measurements": 12660,
+      "duration_seconds": 16300.091002651601,
+      "initial_soc_from_first_rest_voltage": 0.005165608531963336,
+      "initial_current_A": 0.0
+    },
+    {
+      "id": 5,
+      "file": "pulsed_dis.csv",
+      "split": "train",
+      "original_measurements": 15575,
+      "retained_measurements": 15575,
+      "duration_seconds": 14479.316013662195,
+      "initial_soc_from_first_rest_voltage": 0.9976527216510335,
+      "initial_current_A": 0.0
+    },
+    {
+      "id": 6,
+      "file": "CCCV_50A_chg.csv",
+      "split": "validation",
+      "original_measurements": 2181,
+      "retained_measurements": 2181,
+      "duration_seconds": 17418.31647985289,
+      "initial_soc_from_first_rest_voltage": 0.0010050435202583704,
+      "initial_current_A": 0.0
+    },
+    {
+      "id": 7,
+      "file": "CCCV_50A_dis.csv",
+      "split": "validation",
+      "original_measurements": 2177,
+      "retained_measurements": 2177,
+      "duration_seconds": 13786.989738817807,
+      "initial_soc_from_first_rest_voltage": 0.9991193516394843,
+      "initial_current_A": 0.0
+    },
+    {
+      "id": 8,
+      "file": "halfcycles.csv",
+      "split": "test",
+      "original_measurements": 77548,
+      "retained_measurements": 77548,
+      "duration_seconds": 162753.71025927,
+      "initial_soc_from_first_rest_voltage": 0.001080057507990773,
+      "initial_current_A": 0.0
+    },
+    {
+      "id": 9,
+      "file": "loadprofile.csv",
+      "split": "test",
+      "original_measurements": 69541,
+      "retained_measurements": 69541,
+      "duration_seconds": 190230.016296529,
+      "initial_soc_from_first_rest_voltage": 0.001002139946112311,
+      "initial_current_A": 0.0
+    }
+  ],
+  "measurement_counts": {
+    "train": 41759,
+    "validation": 4358,
+    "test": 147089
+  },
+  "ocv_original_points": 99941,
+  "ocv_compressed_points": 353,
+  "ocv_compression_max_error_V": 4.805646556249599e-07,
+  "current_sign": "positive discharge; negative charge",
+  "units": {
+    "time": "s",
+    "current": "A",
+    "voltage": "V",
+    "capacity": "Ah"
+  },
+  "initialization": "Only first observed voltage, near zero current, used for OCV inverse SOC estimate. Initial polarization=0 is an assumption. SOC/polarization are unobserved latent states.",
+  "split_protocol": "Entire 50 A protocols reserved for validation; independent half-cycle and home-storage load profiles reserved for test. No row-random split."
+}

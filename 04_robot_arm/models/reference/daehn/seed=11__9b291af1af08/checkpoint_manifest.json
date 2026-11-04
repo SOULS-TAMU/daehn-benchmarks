@@ -1,0 +1,75 @@
+{
+  "backbone": {
+    "class": "TimeScaledMLPBackbone",
+    "kwargs": {
+      "activation": "tanh",
+      "hidden_sizes": [
+        64,
+        64,
+        64,
+        64
+      ],
+      "state_scales": [
+        1.0,
+        1.639739907548026,
+        1.1812149247338073
+      ],
+      "time_scale": 1.0
+    }
+  },
+  "batch_size": 32,
+  "case_script": "15_robot_arm_daehn.py",
+  "checkpoint_file": "parameter_tree.pkl",
+  "checkpoint_sha256": "ed7d187521c8062410993d2ec38d8612da2abbb02eb475090332b661d045197d",
+  "derivative_steps": [
+    0.005
+  ],
+  "epochs": 5000,
+  "evaluation_data_file": "evaluation_data.npz",
+  "evaluation_data_sha256": "c12244f975d3ce9842a9ddd6bc7689915f1fc03646d0788de90ef70864f72894",
+  "example": 15,
+  "hidden_sizes": [
+    64,
+    64,
+    64,
+    64
+  ],
+  "history_file": "training_history.json",
+  "model": "daehn",
+  "model_display": "DAE-HardNet",
+  "parameter_leaf_count": 10,
+  "plot_layout": "auto",
+  "plot_state_names": [
+    "theta1",
+    "theta2",
+    "theta3"
+  ],
+  "plot_transform": "identity",
+  "pretrain_epochs": 1000,
+  "projected": true,
+  "projection": "fb",
+  "run_config_file": "run_config.json",
+  "run_signature": "9b291af1af08087707f9b7404fb8268695c53533f9471cd38c58636e57f4324f",
+  "schema_version": 2,
+  "seed": 11,
+  "split_info": {
+    "horizon_end": 0.984974958263773,
+    "horizon_start": 0.015025041736227046,
+    "protocol": "same_horizon",
+    "split_mode": "random",
+    "t1": 0.015025041736227046,
+    "t2": 0.984974958263773,
+    "t3": 0.984974958263773
+  },
+  "state_names": [
+    "theta1",
+    "theta2",
+    "theta3"
+  ],
+  "status": "trained",
+  "system": "robot_arm_physical_system",
+  "trainer_class": "RobotArmTrainer",
+  "training_wall_seconds": 117.5771903230052,
+  "trajectory_data_file": "trajectory_data.npz",
+  "trajectory_data_sha256": "a376428972c37081d9a73d93329b47917215411ad9a7ec9c3d2099d3567cb073"
+}

@@ -1,0 +1,45 @@
+{
+  "task": "battery_voltage_forecasting",
+  "model": "pinn",
+  "projection": "none",
+  "hidden_sizes": [
+    8
+  ],
+  "hysteresis_current_scale_A": 0.25,
+  "batch_size": 64,
+  "window_length": 128,
+  "epochs": 1,
+  "learning_rate": 0.001,
+  "seed": 11,
+  "steps_per_epoch": 1,
+  "capacity_prior_weight": 0.001,
+  "soc_bound_weight": 10,
+  "time_discretization": "exponential RC step with frozen midpoint constitutive coefficient and trapezoidal current",
+  "state_order": [
+    "soc",
+    "polarization_V"
+  ],
+  "algebraic_order": [
+    "terminal_voltage_V"
+  ],
+  "input_contract": "initial SOC/polarization, current profile, times; no future voltage input",
+  "data_sha256": "20d47aa5039211a4066b72e0d82fc1358247bd9db16aede480447ba947a022fe",
+  "training_initialization": "Each training window conditions on first observed voltage and SOC derived from accumulated charge. Loss excludes that anchor. Validation selection uses same conditional windows. Test evaluation is a full open-loop profile from its first observation only.",
+  "variant": "voltage_mlp",
+  "activation": "tanh",
+  "fixed_capacity_Ah": 191.5,
+  "hysteresis_rate": 20.0,
+  "hysteresis_relaxation_seconds": 10000.0,
+  "inequality_projection_added": false,
+  "validate_every": 1,
+  "print_every": 1,
+  "training_method": "grey_box_PINN_soft_algebraic_balance",
+  "algebraic_weight": 0.0,
+  "algebraic_residual_scale_V": 0.05,
+  "physics_contract": "SOC and RC dynamics embedded as in voltage_mlp; Kirchhoff equality is a soft loss only; no hard voltage or inequality projection",
+  "selected_epoch": 1,
+  "train_windows": 332,
+  "validation_windows": 36,
+  "parameter_count": 78,
+  "capacity_trainable": true
+}

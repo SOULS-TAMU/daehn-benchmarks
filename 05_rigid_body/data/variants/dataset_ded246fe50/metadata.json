@@ -1,0 +1,56 @@
+{
+  "data_derivative_order": [
+    "domega1_dt",
+    "domega2_dt",
+    "domega3_dt"
+  ],
+  "energy0": 0.9200000000000002,
+  "equations": {
+    "angular_momentum_squared": "(I1*omega1)^2+(I2*omega2)^2+(I3*omega3)^2",
+    "domega1_dt": "((I2-I3)/I1)*omega2*omega3",
+    "domega2_dt": "((I3-I1)/I2)*omega3*omega1",
+    "domega3_dt": "((I1-I2)/I3)*omega1*omega2",
+    "kinetic_energy": "0.5*(I1*omega1^2+I2*omega2^2+I3*omega3^2)"
+  },
+  "horizon": 12.0,
+  "inertias": [
+    1.0,
+    2.0,
+    3.0
+  ],
+  "initial_condition": [
+    0.8,
+    0.6,
+    0.4
+  ],
+  "maximum_energy_residual": 2.829336764875734e-11,
+  "maximum_momentum_squared_residual": 1.1536638311326897e-10,
+  "minimum_invariant_jacobian_singular_value": 0.19275280829698893,
+  "momentum_squared0": 3.5200000000000005,
+  "problem": "torque_free_rigid_body_two_invariants",
+  "samples": 600,
+  "solver": {
+    "atol": 1e-12,
+    "function_evaluations": 644,
+    "method": "DOP853",
+    "rtol": 1e-11
+  },
+  "splits": {
+    "mode": "random",
+    "seed": 31,
+    "test_count": 90,
+    "train_count": 420,
+    "validation_count": 90
+  },
+  "state_order": [
+    "omega_1",
+    "omega_2",
+    "omega_3"
+  ],
+  "state_scales": [
+    1.09998932840522,
+    1.0081649845839236,
+    1.0
+  ],
+  "time_step": 0.02003338898163606
+}

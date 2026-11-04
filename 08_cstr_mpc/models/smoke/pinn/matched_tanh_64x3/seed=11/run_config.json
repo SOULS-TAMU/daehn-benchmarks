@@ -1,0 +1,191 @@
+{
+  "task": "cstr_mpc_flow",
+  "model": "pinn",
+  "projection": "none",
+  "algebraic_constraints": "soft_loss",
+  "differential_dynamics": "loss_enforced_using_predicted_rates",
+  "initial_condition": "hard",
+  "hidden_sizes": [
+    8
+  ],
+  "activation": "tanh",
+  "batch_size": 8,
+  "sampling_interval": 0.25,
+  "input_mean": [
+    0.26889636098204067,
+    0.3314037478388133,
+    0.29062143698003684,
+    0.10586163992365538,
+    1.1963859811685018,
+    0.06243384417400143,
+    1.0028410292978545,
+    0.0022143017751630537
+  ],
+  "input_scale": [
+    0.10696574517203565,
+    0.17548222753447568,
+    0.20981932263627556,
+    0.9304945425328129,
+    0.4385632641255708,
+    0.36705621744288913,
+    0.09348529384657982,
+    0.12886302889277496
+  ],
+  "target_scale": [
+    0.10034073892080335,
+    0.1631382497283742,
+    0.19571843016429913,
+    0.9342973747619207,
+    0.05974534393345997,
+    0.015457330008000935,
+    0.009297033468412843
+  ],
+  "velocity_mean": [
+    0.01799739112388511,
+    0.04889784825769112,
+    -0.051153034032159914,
+    0.012188005850898532
+  ],
+  "velocity_scale": [
+    0.054877443716801456,
+    0.0686687456425474,
+    0.06701270377859456,
+    0.29690761717895914
+  ],
+  "rate_velocity_mean": [
+    0.012874589772814879,
+    0.004451783764034033,
+    -0.0027258954318591104
+  ],
+  "rate_velocity_scale": [
+    0.023976009892744864,
+    0.00613095625784996,
+    0.004136917496336204
+  ],
+  "plant_config": {
+    "schema_version": 1,
+    "sampling_interval": 0.25,
+    "state_bounds": [
+      [
+        0.0,
+        1.2
+      ],
+      [
+        0.0,
+        1.2
+      ],
+      [
+        0.0,
+        1.2
+      ],
+      [
+        -2.0,
+        2.0
+      ]
+    ],
+    "inventory_upper": 1.2,
+    "control_bounds": [
+      [
+        0.4,
+        2.0
+      ],
+      [
+        -0.6,
+        0.6
+      ]
+    ],
+    "disturbance_bounds": [
+      [
+        0.8,
+        1.2
+      ],
+      [
+        -0.2,
+        0.2
+      ]
+    ],
+    "control_move_limits": [
+      0.1,
+      0.05
+    ],
+    "nominal_control": [
+      1.0,
+      -0.0134
+    ],
+    "nominal_state": [
+      0.2667,
+      0.5238,
+      0.1676,
+      0.0
+    ],
+    "nominal_disturbance": [
+      1.0,
+      0.0
+    ],
+    "independent_samples": 4096,
+    "linked_trajectories": 128,
+    "steps_per_trajectory": 64,
+    "interval_nodes": 11,
+    "seed": 31,
+    "split_fractions": [
+      0.8,
+      0.1,
+      0.1
+    ],
+    "solver": {
+      "method": "DOP853",
+      "rtol": 1e-10,
+      "atol": 1e-12
+    },
+    "mpc": {
+      "prediction_horizon": 40,
+      "product_B_reference": 0.5,
+      "concentration_tracking_scale": 0.1,
+      "temperature_tracking_scale": 1.0,
+      "temperature_tracking_weight": 0.05,
+      "input_deviation_weight": 0.01,
+      "input_deviation_scales": [
+        0.8,
+        0.6
+      ],
+      "input_move_weight": 0.1,
+      "terminal_tracking_weight": 2.0,
+      "measurement_assumption": "full state available; disturbances measured/forecast",
+      "terminal_set": null
+    }
+  },
+  "epochs": 2,
+  "pretrain_epochs": 1,
+  "learning_rate": 0.001,
+  "physics_learning_rate": 5e-05,
+  "lambda_data": 1.0,
+  "lambda_derivative": 0.5,
+  "lambda_physics": 1.0,
+  "lambda_algebraic": 1.0,
+  "seed": 11,
+  "data_sha256": "8da2ecc9dc4cf2890f8fff836ad9fa6e2859062b4d951735427f06e7099885b9",
+  "train_samples": 16,
+  "feature_order": [
+    "C_A",
+    "C_B",
+    "C_C",
+    "theta",
+    "phi",
+    "q",
+    "C_Ai",
+    "theta_i",
+    "local_tau"
+  ],
+  "output_order": [
+    "C_A_next",
+    "C_B_next",
+    "C_C_next",
+    "theta_next",
+    "r1_next",
+    "r2_next",
+    "r3_next"
+  ],
+  "checkpoint_selection": "final_epoch_matches_existing_DAEHN",
+  "run_name": "matched_tanh_64x3",
+  "parameter_count": 143
+}

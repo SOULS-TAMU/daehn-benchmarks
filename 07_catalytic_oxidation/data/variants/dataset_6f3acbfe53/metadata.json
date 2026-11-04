@@ -1,0 +1,55 @@
+{
+  "coordinate_max": 1000.0,
+  "coordinate_min": 0.0,
+  "derivative_order": [
+    "dlog_y1_dx1"
+  ],
+  "equations": {
+    "algebraic_1": "y2 = k*y1*y3",
+    "algebraic_2": "y2 + y3 = 1",
+    "internal_differential": "dlog_y1/dx1 = -a*k*y3",
+    "internal_state": "log_y1 = log(y1)",
+    "physical_differential": "-dy1/dx1 = a*y2"
+  },
+  "equilibrium_coefficient": 6.0,
+  "horizon": 1000.0,
+  "initial_y1": 1.0,
+  "internal_state_order": [
+    "log_y1",
+    "y2",
+    "y3"
+  ],
+  "maximum_algebraic_residual": 2.220446049250313e-16,
+  "maximum_differential_residual": 1.734723475976807e-18,
+  "maximum_y1": 1.0,
+  "minimum_y1": 5.749522264195717e-19,
+  "physical_state_order": [
+    "y1",
+    "y2",
+    "y3"
+  ],
+  "problem": "catalysis_dae",
+  "rate_coefficient": 0.008,
+  "samples": 2000,
+  "solver": {
+    "atol": 1e-12,
+    "function_evaluations": 611,
+    "method": "DOP853 on log(y1)",
+    "rtol": 1e-11
+  },
+  "source_kind": "generated_consistent_trajectory",
+  "splits": {
+    "mode": "random",
+    "seed": 31,
+    "split_seed": 31,
+    "test_count": 300,
+    "train_count": 1400,
+    "validation_count": 300
+  },
+  "state_scales": [
+    46.200000000018726,
+    1.0,
+    1.0
+  ],
+  "time_step": 0.5002501250625073
+}

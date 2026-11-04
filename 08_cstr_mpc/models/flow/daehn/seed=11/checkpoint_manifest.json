@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "task": "cstr_mpc_flow",
+  "architecture": "anchored_local_flow_mlp",
+  "checkpoint_sha256": "20bc9cffc9c29ab2ffc28d195fce34cf9fb0be8d0d4b52fe8bf23c8e9625802f",
+  "input_size": 8,
+  "network_input_size": 9,
+  "output_size": 7,
+  "network_output_size": 4,
+  "sampling_interval": 0.25,
+  "projection": "explicit_algebraic_rate",
+  "differential_dynamics": "loss_enforced",
+  "initial_condition": "hard",
+  "training_wall_seconds": 1516.4576008000004,
+  "data_sha256": "8da2ecc9dc4cf2890f8fff836ad9fa6e2859062b4d951735427f06e7099885b9"
+}

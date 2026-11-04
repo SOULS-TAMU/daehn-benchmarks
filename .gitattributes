@@ -1,0 +1,11 @@
+* text=auto
+*.py text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
+# Preserve dataset and checkpoint bytes, regardless of operating system.
+**/models/** -text
+**/data/** -text
+*.npz binary
+*.pkl binary
+*.png binary
+*.pdf binary

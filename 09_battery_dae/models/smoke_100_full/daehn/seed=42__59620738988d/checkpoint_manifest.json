@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "task": "battery_voltage_forecasting",
+  "model": "daehn",
+  "checkpoint_file": "parameter_tree.pkl",
+  "checkpoint_sha256": "a225d0d277dee2addac4e1bded9497d3e0e7f62522831cb37592abe0306a74f8",
+  "data_sha256": "20d47aa5039211a4066b72e0d82fc1358247bd9db16aede480447ba947a022fe",
+  "training_wall_seconds": 22.272855100000015,
+  "epochs_executed": 100,
+  "selected_epoch": 100,
+  "input_contract": "initial SOC/polarization, current profile, times; no future voltage input",
+  "constitutive_network": "MLPBackbone on SOC and signed current; softplus resistance",
+  "dae_index": 1,
+  "projection": "LinearEqualityProjection",
+  "differential_states": [
+    "soc",
+    "polarization_V"
+  ],
+  "algebraic_states": [
+    "terminal_voltage_V"
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "task": "battery_voltage_forecasting",
+  "model": "dynamic_hysteresis",
+  "projection": "native_linear_voltage_equality",
+  "hidden_sizes": [
+    128,
+    128,
+    128
+  ],
+  "hysteresis_current_scale_A": 0.25,
+  "batch_size": 64,
+  "window_length": 128,
+  "epochs": 3000,
+  "learning_rate": 0.0001,
+  "seed": 11,
+  "steps_per_epoch": null,
+  "capacity_prior_weight": 0.001,
+  "soc_bound_weight": 10.0,
+  "time_discretization": "exponential RC step with frozen midpoint constitutive coefficient and trapezoidal current",
+  "state_order": [
+    "soc",
+    "polarization_V",
+    "hysteresis_state"
+  ],
+  "algebraic_order": [
+    "terminal_voltage_V"
+  ],
+  "input_contract": "initial SOC/polarization, current profile, times; no future voltage input",
+  "data_sha256": "20d47aa5039211a4066b72e0d82fc1358247bd9db16aede480447ba947a022fe",
+  "training_initialization": "Each training window conditions on first observed voltage and SOC derived from accumulated charge. Loss excludes that anchor. Validation selection uses same conditional windows. Test evaluation is a full open-loop profile from its first observation only.",
+  "variant": "dynamic_hysteresis",
+  "activation": "tanh",
+  "fixed_capacity_Ah": 191.5,
+  "hysteresis_rate": 20.0,
+  "hysteresis_relaxation_seconds": 10000.0,
+  "inequality_projection_added": false,
+  "validate_every": 1,
+  "print_every": 50,
+  "selected_epoch": 2945,
+  "train_windows": 332,
+  "validation_windows": 36,
+  "parameter_count": 33541,
+  "capacity_trainable": true
+}

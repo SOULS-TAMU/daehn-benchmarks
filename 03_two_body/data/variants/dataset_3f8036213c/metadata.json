@@ -1,0 +1,56 @@
+{
+  "angular_momentum0": 1.0,
+  "data_derivative_order": [
+    "dq1_dt",
+    "dq2_dt",
+    "dp1_dt",
+    "dp2_dt"
+  ],
+  "equations": {
+    "algebraic_residual": "q1*p2 - q2*p1 - angular_momentum0",
+    "angular_momentum": "q1*p2 - q2*p1",
+    "dp1_dt": "-mu*q1/(q1^2+q2^2)^(3/2)",
+    "dp2_dt": "-mu*q2/(q1^2+q2^2)^(3/2)",
+    "dq1_dt": "p1",
+    "dq2_dt": "p2"
+  },
+  "horizon": 6.283185307179586,
+  "initial_condition": [
+    1.0,
+    0.0,
+    0.0,
+    1.0
+  ],
+  "maximum_angular_momentum_residual": 1.184696785117012e-11,
+  "minimum_radius": 0.9999999999935422,
+  "mu": 1.0,
+  "problem": "planar_two_body_angular_momentum_invariant",
+  "samples": 600,
+  "solver": {
+    "atol": 1e-12,
+    "function_evaluations": 572,
+    "method": "DOP853",
+    "rtol": 1e-11
+  },
+  "splits": {
+    "mode": "random",
+    "seed": 31,
+    "split_seed": 31,
+    "test_count": 90,
+    "train_count": 420,
+    "validation_count": 90
+  },
+  "state_order": [
+    "position_q1",
+    "position_q2",
+    "momentum_p1",
+    "momentum_p2"
+  ],
+  "state_scales": [
+    1.1,
+    1.0999962177686773,
+    1.0999962177625404,
+    1.1000000000001633
+  ],
+  "time_step": 0.010489457941869092
+}

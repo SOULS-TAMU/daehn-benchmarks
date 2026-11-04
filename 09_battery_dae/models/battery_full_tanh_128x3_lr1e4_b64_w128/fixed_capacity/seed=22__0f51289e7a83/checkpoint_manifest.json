@@ -1,0 +1,23 @@
+{
+  "schema_version": 2,
+  "task": "battery_voltage_forecasting",
+  "model": "fixed_capacity",
+  "checkpoint_file": "parameter_tree.pkl",
+  "checkpoint_sha256": "398632cbf4aeeddef4aec9d5d860b58917cfc2fe93a4aaac48d846cbc60107cb",
+  "data_sha256": "20d47aa5039211a4066b72e0d82fc1358247bd9db16aede480447ba947a022fe",
+  "training_wall_seconds": 2708.8638648999986,
+  "epochs_executed": 3000,
+  "selected_epoch": 2748,
+  "input_contract": "initial SOC/polarization, current profile, times; no future voltage input",
+  "dae_index": 1,
+  "projection": "LinearEqualityProjection",
+  "differential_states": [
+    "soc",
+    "polarization_V"
+  ],
+  "algebraic_states": [
+    "terminal_voltage_V"
+  ],
+  "parameter_count": 33541,
+  "activation": "tanh"
+}

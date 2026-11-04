@@ -1,0 +1,229 @@
+{
+  "schema_version": 1,
+  "purpose": "state/control-conditioned CSTR flow-map learning for downstream B-concentration MPC",
+  "input_names": [
+    "C_A",
+    "C_B",
+    "C_C",
+    "theta",
+    "phi",
+    "q",
+    "C_Ai",
+    "theta_i"
+  ],
+  "output_names": [
+    "C_A_next",
+    "C_B_next",
+    "C_C_next",
+    "theta_next",
+    "r1_next",
+    "r2_next",
+    "r3_next"
+  ],
+  "constraint_names": [
+    "C_A_lower",
+    "C_B_lower",
+    "C_C_lower",
+    "theta_lower",
+    "C_A_upper",
+    "C_B_upper",
+    "C_C_upper",
+    "theta_upper",
+    "inventory_upper"
+  ],
+  "split_codes": {
+    "train": 0,
+    "validation": 1,
+    "test": 2
+  },
+  "sample_kind_codes": {
+    "independent": 0,
+    "linked_trajectory": 1
+  },
+  "samples": 12018,
+  "linked_transitions": 7922,
+  "trajectory_groups": 4224,
+  "split_counts": {
+    "train": 9612,
+    "validation": 1099,
+    "test": 1307
+  },
+  "unsafe_sampled_intervals": 50,
+  "out_of_domain_endpoints": 50,
+  "algebraic_residual_max": 0.0,
+  "input_min": [
+    0.0,
+    0.0,
+    0.0,
+    -2.0,
+    0.4,
+    -0.6,
+    0.8,
+    -0.2
+  ],
+  "input_max": [
+    1.1607417991890054,
+    1.1318851759274255,
+    1.1106238298774547,
+    2.0,
+    2.0,
+    0.6,
+    1.2,
+    0.2
+  ],
+  "target_min": [
+    0.014959337520603416,
+    0.003593740099687716,
+    0.00029008542294234574,
+    -2.082346571229999,
+    0.008150999128218784,
+    0.0002340550346361481,
+    1.2200637519259924e-05
+  ],
+  "target_max": [
+    1.0287599541540298,
+    1.052529902096934,
+    1.0495799193738309,
+    2.095278429643673,
+    0.7825756475776605,
+    0.11549501047887635,
+    0.06477309695454755
+  ],
+  "normalization_training_only": {
+    "input_mean": [
+      0.29640881961876436,
+      0.41471567297632395,
+      0.21739848509004975,
+      0.0780667789383984,
+      1.2001490740930585,
+      0.013016660256574481,
+      1.0017606789353926,
+      0.0010897408203996133
+    ],
+    "input_scale": [
+      0.15462556024071666,
+      0.18285763090036838,
+      0.16543414034871873,
+      0.9854064077009121,
+      0.4184386350976643,
+      0.30704870591391037,
+      0.1149212364035706,
+      0.11527133309831172
+    ],
+    "target_mean": [
+      0.295985275341845,
+      0.4231302066708278,
+      0.21086423156456613,
+      0.07960183675962582,
+      0.16755049312167225,
+      0.035312337119277136,
+      0.010782906870050976
+    ],
+    "target_scale": [
+      0.13132029909919998,
+      0.16635924506640115,
+      0.15293144196088412,
+      0.9522458552490827,
+      0.07966425721736206,
+      0.015911571503492355,
+      0.007946411123182418
+    ]
+  },
+  "effective_config": {
+    "schema_version": 1,
+    "sampling_interval": 0.25,
+    "state_bounds": [
+      [
+        0.0,
+        1.2
+      ],
+      [
+        0.0,
+        1.2
+      ],
+      [
+        0.0,
+        1.2
+      ],
+      [
+        -2.0,
+        2.0
+      ]
+    ],
+    "inventory_upper": 1.2,
+    "control_bounds": [
+      [
+        0.4,
+        2.0
+      ],
+      [
+        -0.6,
+        0.6
+      ]
+    ],
+    "disturbance_bounds": [
+      [
+        0.8,
+        1.2
+      ],
+      [
+        -0.2,
+        0.2
+      ]
+    ],
+    "control_move_limits": [
+      0.1,
+      0.05
+    ],
+    "nominal_control": [
+      1.0,
+      -0.0134
+    ],
+    "nominal_state": [
+      0.2667,
+      0.5238,
+      0.1676,
+      0.0
+    ],
+    "nominal_disturbance": [
+      1.0,
+      0.0
+    ],
+    "independent_samples": 4096,
+    "linked_trajectories": 128,
+    "steps_per_trajectory": 64,
+    "interval_nodes": 11,
+    "seed": 31,
+    "split_fractions": [
+      0.8,
+      0.1,
+      0.1
+    ],
+    "solver": {
+      "method": "DOP853",
+      "rtol": 1e-10,
+      "atol": 1e-12
+    },
+    "mpc": {
+      "prediction_horizon": 40,
+      "product_B_reference": 0.5,
+      "concentration_tracking_scale": 0.1,
+      "temperature_tracking_scale": 1.0,
+      "temperature_tracking_weight": 0.05,
+      "input_deviation_weight": 0.01,
+      "input_deviation_scales": [
+        0.8,
+        0.6
+      ],
+      "input_move_weight": 0.1,
+      "terminal_tracking_weight": 2.0,
+      "measurement_assumption": "full state available; disturbances measured/forecast",
+      "terminal_set": null
+    }
+  },
+  "labels": "Continuous-flow integration; controls and disturbances held constant per interval. Violations are sampled, not continuous-time certificates. No measured/noisy plant data.",
+  "model_source_sha256": "14fb54f58bc151e4ca4537536b52fe54d881f81a3cf2e6db99bd14994864752c",
+  "generator_source_sha256": "710ade23dbb4392dbc92977622a0e9cf76fc84f2942b4095b4dab289fae736c2",
+  "generation_seconds": 41.49067470000227,
+  "data_sha256": "8da2ecc9dc4cf2890f8fff836ad9fa6e2859062b4d951735427f06e7099885b9"
+}

@@ -1,0 +1,24 @@
+{
+  "schema_version": 2,
+  "task": "battery_voltage_forecasting",
+  "model": "dynamic_hysteresis",
+  "checkpoint_file": "parameter_tree.pkl",
+  "checkpoint_sha256": "04ad948ba37bc46a45b9ae5043f82b313f0021a66ca86074f889b72eec577683",
+  "data_sha256": "20d47aa5039211a4066b72e0d82fc1358247bd9db16aede480447ba947a022fe",
+  "training_wall_seconds": 4.536387900003319,
+  "epochs_executed": 3,
+  "selected_epoch": 3,
+  "input_contract": "initial SOC/polarization, current profile, times; no future voltage input",
+  "dae_index": 1,
+  "projection": "LinearEqualityProjection",
+  "differential_states": [
+    "soc",
+    "polarization_V",
+    "hysteresis_state"
+  ],
+  "algebraic_states": [
+    "terminal_voltage_V"
+  ],
+  "parameter_count": 109,
+  "activation": "tanh"
+}

@@ -1,0 +1,79 @@
+{
+  "backbone": {
+    "class": "CSTRPeriodicBackbone",
+    "kwargs": {
+      "activation": "tanh",
+      "forcing_period": 20.0,
+      "harmonics": 2,
+      "hidden_sizes": [
+        64,
+        64,
+        64
+      ],
+      "time_end": 60.5,
+      "time_start": 40.5
+    }
+  },
+  "batch_size": 128,
+  "case_script": "08_cstr_multiple_reaction_system.py",
+  "checkpoint_file": "parameter_tree.pkl",
+  "checkpoint_sha256": "635aadf49330b0763171e3dd84856cd962f5a914c3bc5a1174edeca89854567f",
+  "derivative_steps": [
+    0.001
+  ],
+  "epochs": 5000,
+  "evaluation_data_file": "evaluation_data.npz",
+  "evaluation_data_sha256": "d417408c64eb7d37e5b8a0d8c83663b299ed49ec92102c3412428e5c2eb0cf5c",
+  "example": 8,
+  "hidden_sizes": [
+    64,
+    64,
+    64
+  ],
+  "history_file": "training_history.json",
+  "model": "daehn",
+  "model_display": "DAE-HardNet",
+  "parameter_leaf_count": 8,
+  "plot_layout": "centered_4_3",
+  "plot_state_names": [
+    "$C_{A}$",
+    "$C_{B}$",
+    "$C_{C}$",
+    "$\\theta$",
+    "$r_{1}$",
+    "$r_{2}$",
+    "$r_{3}$"
+  ],
+  "plot_transform": "identity",
+  "pretrain_epochs": 1000,
+  "projected": true,
+  "projection": "fb",
+  "run_config_file": "run_config.json",
+  "run_signature": "3e3af693f15f94d10c66421f71242a611bf02342154a5f398d17a055c6037442",
+  "schema_version": 2,
+  "seed": 22,
+  "split_info": {
+    "horizon_end": 60.46384720327422,
+    "horizon_start": 40.527512505684406,
+    "protocol": "same_horizon",
+    "split_mode": "random",
+    "t1": 40.527512505684406,
+    "t2": 60.46384720327422,
+    "t3": 60.46384720327422
+  },
+  "state_names": [
+    "c_A",
+    "c_B",
+    "c_C",
+    "theta",
+    "r1",
+    "r2",
+    "r3"
+  ],
+  "status": "trained",
+  "system": "cstr_multiple_reaction",
+  "trainer_class": "WeightedDAETrainer",
+  "training_wall_seconds": 186.7416651849635,
+  "trajectory_data_file": "trajectory_data.npz",
+  "trajectory_data_sha256": "596adda49ad83a5e13262ffeae986670082c0dae6b3b6d7f2435e7dd92379fce"
+}

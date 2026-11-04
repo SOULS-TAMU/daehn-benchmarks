@@ -1,0 +1,78 @@
+{
+  "backbone": {
+    "class": "TimeScaledMLPBackbone",
+    "kwargs": {
+      "activation": "tanh",
+      "hidden_sizes": [
+        64,
+        64,
+        64,
+        64
+      ],
+      "state_scales": [
+        1.1,
+        1.0999962177686773,
+        1.0999962177625404,
+        1.1000000000001633
+      ],
+      "time_scale": 6.283185307179586
+    }
+  },
+  "batch_size": 32,
+  "case_script": "13_two_body_daehn.py",
+  "checkpoint_file": "parameter_tree.pkl",
+  "checkpoint_sha256": "743362f80bff2cb13b214c477e963104c3c46cea80eabacc3992e1ec4ecfd85e",
+  "derivative_steps": [
+    0.01
+  ],
+  "epochs": 5000,
+  "evaluation_data_file": "evaluation_data.npz",
+  "evaluation_data_sha256": "e6dd82596ac61412aeab85e9a01713a385b5fb31f8b00f0a73ed6311fc899e6b",
+  "example": 13,
+  "hidden_sizes": [
+    64,
+    64,
+    64,
+    64
+  ],
+  "history_file": "training_history.json",
+  "model": "pinn",
+  "model_display": "PINN",
+  "parameter_leaf_count": 10,
+  "plot_layout": "auto",
+  "plot_state_names": [
+    "position_q1",
+    "position_q2",
+    "momentum_p1",
+    "momentum_p2"
+  ],
+  "plot_transform": "identity",
+  "pretrain_epochs": 0,
+  "projected": false,
+  "projection": "none",
+  "run_config_file": "run_config.json",
+  "run_signature": "bffbf0662db5c44728f2880872477f5159ec0c0d272e91b6d1bf97a2c6f620bf",
+  "schema_version": 2,
+  "seed": 33,
+  "split_info": {
+    "horizon_end": 6.251716933353979,
+    "horizon_start": 0.03146837382560728,
+    "protocol": "same_horizon",
+    "split_mode": "random",
+    "t1": 0.03146837382560728,
+    "t2": 6.251716933353979,
+    "t3": 6.251716933353979
+  },
+  "state_names": [
+    "position_q1",
+    "position_q2",
+    "momentum_p1",
+    "momentum_p2"
+  ],
+  "status": "trained",
+  "system": "two_body_physical_system",
+  "trainer_class": "TwoBodyTrainer",
+  "training_wall_seconds": 127.06391879999865,
+  "trajectory_data_file": "trajectory_data.npz",
+  "trajectory_data_sha256": "194cc1f81c3c5dbcaa7faa443d32dcbbb25b6867b16ec670a274f7f39ef14cae"
+}

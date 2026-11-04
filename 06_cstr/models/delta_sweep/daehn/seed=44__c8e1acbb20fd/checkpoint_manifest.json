@@ -1,0 +1,79 @@
+{
+  "backbone": {
+    "class": "CSTRPeriodicBackbone",
+    "kwargs": {
+      "activation": "tanh",
+      "forcing_period": 20.0,
+      "harmonics": 2,
+      "hidden_sizes": [
+        64,
+        64,
+        64
+      ],
+      "time_end": 60.5,
+      "time_start": 40.5
+    }
+  },
+  "batch_size": 128,
+  "case_script": "08_cstr_multiple_reaction_system.py",
+  "checkpoint_file": "parameter_tree.pkl",
+  "checkpoint_sha256": "a50c863f62cd12994f1a259897fee819172f119031e2aae43c6bd936c17c8677",
+  "derivative_steps": [
+    0.1
+  ],
+  "epochs": 5000,
+  "evaluation_data_file": "evaluation_data.npz",
+  "evaluation_data_sha256": "925b5d6186c0bbcd6ac44be1bd6ff4c9793adb8ab3af1f3af584846028fc7de0",
+  "example": 8,
+  "hidden_sizes": [
+    64,
+    64,
+    64
+  ],
+  "history_file": "training_history.json",
+  "model": "daehn",
+  "model_display": "DAE-HardNet",
+  "parameter_leaf_count": 8,
+  "plot_layout": "centered_4_3",
+  "plot_state_names": [
+    "$C_{A}$",
+    "$C_{B}$",
+    "$C_{C}$",
+    "$\\theta$",
+    "$r_{1}$",
+    "$r_{2}$",
+    "$r_{3}$"
+  ],
+  "plot_transform": "identity",
+  "pretrain_epochs": 1000,
+  "projected": true,
+  "projection": "fb",
+  "run_config_file": "run_config.json",
+  "run_signature": "c8e1acbb20fd017478baf021787d57a6c34b5e0d4c31be3c780c2093ef47d817",
+  "schema_version": 2,
+  "seed": 44,
+  "split_info": {
+    "horizon_end": 60.28194633924512,
+    "horizon_start": 40.70941336971351,
+    "protocol": "same_horizon",
+    "split_mode": "random",
+    "t1": 40.70941336971351,
+    "t2": 60.28194633924512,
+    "t3": 60.28194633924512
+  },
+  "state_names": [
+    "c_A",
+    "c_B",
+    "c_C",
+    "theta",
+    "r1",
+    "r2",
+    "r3"
+  ],
+  "status": "trained",
+  "system": "cstr_multiple_reaction",
+  "trainer_class": "WeightedDAETrainer",
+  "training_wall_seconds": 184.96324661903782,
+  "trajectory_data_file": "trajectory_data.npz",
+  "trajectory_data_sha256": "465bd00f69c755c30eccfc8fc8d8beb83161e7f34887ae3f6e50e4f92ff3ec5c"
+}

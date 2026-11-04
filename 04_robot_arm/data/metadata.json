@@ -1,0 +1,54 @@
+{
+  "data_derivative_order": [
+    "dtheta1_dt",
+    "dtheta2_dt",
+    "dtheta3_dt"
+  ],
+  "end_effector0": [
+    1.6903360266096223,
+    0.34264807597562474
+  ],
+  "equations": {
+    "constraint": "e(theta)-p(t)=0",
+    "end_effector_x": "cos(theta1)+cos(theta2)+cos(theta3)",
+    "end_effector_y": "sin(theta1)+sin(theta2)+sin(theta3)",
+    "joint_velocity": "J(theta)^T [J(theta)J(theta)^T]^{-1} p_dot(t)",
+    "path_x": "e0_x-sin(2*pi*t)/(2*pi)",
+    "path_y": "e0_y"
+  },
+  "horizon": 1.0,
+  "initial_condition": [
+    0.2,
+    1.4,
+    -1.0
+  ],
+  "maximum_constraint_residual": 1.1545431277681928e-11,
+  "minimum_jacobian_singular_value": 1.0775463498091031,
+  "problem": "three_link_robot_arm_kinematic_constraint",
+  "samples": 600,
+  "solver": {
+    "atol": 1e-12,
+    "function_evaluations": 293,
+    "method": "DOP853",
+    "rtol": 1e-11
+  },
+  "splits": {
+    "mode": "random",
+    "seed": 31,
+    "split_seed": 31,
+    "test_count": 90,
+    "train_count": 420,
+    "validation_count": 90
+  },
+  "state_order": [
+    "theta1",
+    "theta2",
+    "theta3"
+  ],
+  "state_scales": [
+    1.0,
+    1.639739907548026,
+    1.1812149247338073
+  ],
+  "time_step": 0.001669449081803005
+}

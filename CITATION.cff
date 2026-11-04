@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "Please cite this benchmark repository, DAE-HardNet and the data sources relevant to your study."
+title: "DAE-HardNet benchmarks"
+type: software
+authors:
+  - name: "SOULS-TAMU contributors"
+repository-code: "https://github.com/SOULS-TAMU/daehn-benchmarks"
+url: "https://github.com/SOULS-TAMU/daehn-benchmarks"
+license: Apache-2.0
+references:
+  - type: software
+    title: "DAEHN"
+    authors:
+      - name: "SOULS-TAMU contributors"
+    repository-code: "https://github.com/SOULS-TAMU/dae-hardnet"
+  - type: data
+    title: "Code and measurement data - Neural ordinary differential equations for grey-box modelling of lithium-ion batteries on the basis of an equivalent circuit model"
+    doi: "10.5281/zenodo.6323623"
+    year: 2022
+    authors:
+      - family-names: Brucker
+        given-names: Jennifer
+      - family-names: Behmann
+        given-names: René
+      - family-names: Bessler
+        given-names: Wolfgang G.
+      - family-names: Gasper
+        given-names: Rainer

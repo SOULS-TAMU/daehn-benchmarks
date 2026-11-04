@@ -1,0 +1,35 @@
+{
+  "amplitude": 1.0,
+  "data_derivative_order": [
+    "dposition_dt",
+    "dvelocity_dt"
+  ],
+  "energy0": 0.5,
+  "equations": {
+    "algebraic_residual": "0.5*(x^2 + v^2) - energy0",
+    "dv_dt": "-x",
+    "dx_dt": "v",
+    "energy": "0.5*(x^2 + v^2)"
+  },
+  "horizon": 6.283185307179586,
+  "initial_condition": {
+    "position_x0": 1.0,
+    "velocity_v0": 0.0
+  },
+  "maximum_energy_residual": 1.1102230246251565e-16,
+  "problem": "unit_mass_spring_energy_invariant",
+  "samples": 600,
+  "splits": {
+    "mode": "random",
+    "seed": 31,
+    "split_seed": 31,
+    "test_count": 90,
+    "train_count": 420,
+    "validation_count": 90
+  },
+  "state_order": [
+    "position_x",
+    "velocity_v"
+  ],
+  "time_step": 0.010489457941869092
+}

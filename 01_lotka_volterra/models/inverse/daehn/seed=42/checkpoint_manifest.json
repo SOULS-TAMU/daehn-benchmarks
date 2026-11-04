@@ -1,0 +1,26 @@
+{
+  "schema_version": 3,
+  "task": "inverse",
+  "example": 11,
+  "model": "daehn",
+  "seed": 42,
+  "case_script": "inverse.py",
+  "parameter_names": [
+    "alpha",
+    "beta",
+    "gamma",
+    "delta"
+  ],
+  "source_csv": "D:\\Projects\\daehn-benchmarks\\01_lotka_volterra\\data\\trajectory.csv",
+  "source_csv_sha256": "ba80af612695539d623827001960396bce98fc3a0d7b757984f2f272bf52249b",
+  "observed_columns": [
+    "time",
+    "prey_x",
+    "predator_y"
+  ],
+  "ignored_columns": "all other CSV columns",
+  "checkpoint_file": "parameter_tree.pkl",
+  "checkpoint_sha256": "d48650ad8e3ff8a9168b26aa0e7f118eaf9f20f1830ecdade5bff09294d28672",
+  "training_wall_seconds": 60.64245459999802,
+  "derivative_evaluation": "symmetric finite difference of full projected model"
+}

@@ -1,0 +1,76 @@
+{
+  "backbone": {
+    "class": "TimeScaledMLPBackbone",
+    "kwargs": {
+      "activation": "tanh",
+      "coordinate_min": 0.0,
+      "coordinate_scale": 1000.0,
+      "hidden_sizes": [
+        64,
+        64,
+        64,
+        64
+      ],
+      "state_scales": [
+        24.7974760008357,
+        1.0,
+        1.0
+      ]
+    }
+  },
+  "batch_size": 32,
+  "case_script": "17_catalysis_dae_daehn.py",
+  "checkpoint_file": "parameter_tree.pkl",
+  "checkpoint_sha256": "1aa1b4b6a496d93123fd2693398e3187a848fa8b45202611c4e8f08cdfef889d",
+  "derivative_steps": [
+    1.0
+  ],
+  "epochs": 5000,
+  "evaluation_data_file": "evaluation_data.npz",
+  "evaluation_data_sha256": "0bb6da1c64c1ebaab3ab376785493a302ac5fc2fca230369f16854b9c673c27d",
+  "example": 17,
+  "hidden_sizes": [
+    64,
+    64,
+    64,
+    64
+  ],
+  "history_file": "training_history.json",
+  "model": "daehn",
+  "model_display": "DAE-HardNet",
+  "parameter_leaf_count": 10,
+  "plot_layout": "auto",
+  "plot_state_names": [
+    "y1",
+    "y2",
+    "y3"
+  ],
+  "plot_transform": "catalysis_physical",
+  "pretrain_epochs": 1000,
+  "projected": true,
+  "projection": "fb",
+  "run_config_file": "run_config.json",
+  "run_signature": "f8bb531ce3a2ca5595b076ac35133c80e9821a9bb07fb297f0abedbb0eeb3876",
+  "schema_version": 2,
+  "seed": 44,
+  "split_info": {
+    "horizon_end": 998.4992496248125,
+    "horizon_start": 1.500750375187594,
+    "protocol": "same_horizon",
+    "split_mode": "random",
+    "t1": 1.500750375187594,
+    "t2": 998.4992496248125,
+    "t3": 998.4992496248125
+  },
+  "state_names": [
+    "log_y1",
+    "y2",
+    "y3"
+  ],
+  "status": "trained",
+  "system": "catalysis_physical_dae",
+  "trainer_class": "CatalysisTrainer",
+  "training_wall_seconds": 309.5759072060173,
+  "trajectory_data_file": "trajectory_data.npz",
+  "trajectory_data_sha256": "39fb2c1085cc7c891bbcde33a73f0405834dde4473313920bb20a73dc452bc92"
+}

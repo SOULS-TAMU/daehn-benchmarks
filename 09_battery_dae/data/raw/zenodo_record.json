@@ -1,0 +1,256 @@
+{
+  "created": "2022-03-02T17:30:34.880857+00:00",
+  "modified": "2022-04-05T13:04:10.898842+00:00",
+  "id": 6323623,
+  "conceptrecid": "6138075",
+  "doi": "10.5281/zenodo.6323623",
+  "conceptdoi": "10.5281/zenodo.6138075",
+  "doi_url": "https://doi.org/10.5281/zenodo.6323623",
+  "metadata": {
+    "title": "Code and measurement data - Neural ordinary differential equations for grey-box modelling of lithium-ion batteries on the basis of an equivalent circuit model",
+    "doi": "10.5281/zenodo.6323623",
+    "publication_date": "2022-02-24",
+    "description": "<p>This dataset contains code and measurement data for the paper <a href=\"https://www.mdpi.com/1996-1073/15/7/2661\">&#39;Neural ordinary differential equations for grey-box modelling of lithium-ion batteries on the basis of an equivalent circuit model&#39;</a>.</p>\n\n<p>The code is implemented in Python and uses the following packages: Pandas, SciPy, NumPy, Torch, and Matplotlib. It also builds on the torchdiffeq library (Chen 2018), which provides various differential ODE solvers. The torchdiffeq library including instructions on its installation can be found in this <a href=\"https://github.com/rtqichen/torchdiffeq\">repository</a>.</p>\n\n<p>The investigated prismatic single cell is a 180 Ah home storage cell of the Chinese manufacturer CALB and uses lithium iron phosphate at the positive electrode and graphite at the negative electrode. The cell was investigated experimentally under a controlled laboratory environment (climate chamber CTS 40/200 Li) using a battery cycler with four-wire measurement (Biologic VMP3). Details on the cell and characterization methods can be found in Yagci et al. (2021).</p>\n\n<p>We measured experimental data sets representing several different operation scenarios. Constant current constant voltage (CCCV) charge and discharge with different C-rates of 0.1 C (18 A), 0.28 C (50 A), and 1 C (180 A) during the CC phase, and one charge and one discharge curve with included current pulses were measured. Furthermore, we carried out two independent measurements for model testing. Firstly, the cell was cycled with 50 A between 25 % and 75 % SOC. Secondly, the cell was subjected to a dynamic load profile taken from Wei&szlig;har, Bessler (2017) and downscaled to the present cell. All measurements were carried out at an ambient temperature of T = 25 &deg;C.</p>\n\n<p>The number of data points per measurement series was large. Therefore, beginning from the first value, we decided to only keep measurement values if the current varied by |\u2206ibat| &ge; 0.5 A or the measured voltage varied by |\u2206ubat| &ge; 0.5 mV between two subsequent values. We used SI units for our upload. The current was measured in milliamperes. However, here it is given in amperes. The time is given in seconds and the voltage is given in volts. The open-cirucit voltage (OCV) - state-of-charge (SOC) data was taken from Yagci et al. (2021), which is licensed under <a href=\"https://creativecommons.org/licenses/by/4.0/\">CC BY 4.0</a>. The OCV is given in volts and the SOC is given as a value between zero (empty battery) and one (fully-charged battery).</p>\n\n<p>&nbsp;</p>\n\n<p>Download the CSV files, and the code files and save them in the same folder. First, run the code &#39;ECM_GB_static_model.py&#39; to train the static network neglecting the double-layer capacitance of the RC circuit. The learned parameters are stored. After finishing the first training part run &#39;ECM_GB_complete.py&#39; to proceed with the training. The pre-trained parameters are loaded and the additional double-layer capacitance is initialized. The learned parameters are stored.</p>",
+    "access_right": "open",
+    "creators": [
+      {
+        "name": "Brucker, Jennifer",
+        "affiliation": "HS Offenburg",
+        "orcid": "0000-0003-3334-2819"
+      },
+      {
+        "name": "Behmann, Ren\u00e9",
+        "affiliation": "HS Offenburg"
+      },
+      {
+        "name": "Bessler, Wolfgang G.",
+        "affiliation": "HS Offenburg",
+        "orcid": "0000-0001-8037-9046"
+      },
+      {
+        "name": "Gasper, Rainer",
+        "affiliation": "HS Offenburg"
+      }
+    ],
+    "keywords": [
+      "neural networks",
+      "neural ordinary differential equations",
+      "grey-box modelling",
+      "lithium-ion batteries",
+      "equivalent circuit modelling"
+    ],
+    "related_identifiers": [
+      {
+        "identifier": "10.3390/en15072661",
+        "relation": "isSupplementTo",
+        "resource_type": "publication-article",
+        "scheme": "doi"
+      }
+    ],
+    "version": "2.0.1",
+    "references": [
+      "Chen, Ricky T. Q. (2021): torchdiffeq. Version 0.2.1. Available online at https://github.com/rtqichen/torchdiffeq, checked on 2/22/2022.",
+      "Wei\u00dfhar, Bj\u00f6rn; Bessler, Wolfgang G. (2017): Model-based lifetime prediction of an LFP/graphite lithium-ion battery in a stationary photovoltaic battery system. In: Journal of Energy Storage 14, S. 179\u2013191. DOI: 10.1016/j.est.2017.10.002.",
+      "Yagci, Mehmet C.; Behmann, Ren\u00e9; Daubert, Viktor; Braun, Jonas A.; Velten, Dirk; Bessler, Wolfgang G. (2021): Electrical and Structural Characterization of Large\u2010Format Lithium Iron Phosphate Cells used in Home\u2010Storage Systems. In: Energy Technol. 9 (6). DOI:10.1002/ente.20200091."
+    ],
+    "language": "eng",
+    "resource_type": {
+      "title": "Other",
+      "type": "other"
+    },
+    "license": {
+      "id": "mit-license"
+    },
+    "communities": [
+      {
+        "id": "ines-offenburg"
+      }
+    ],
+    "relations": {
+      "version": [
+        {
+          "index": 2,
+          "is_last": true,
+          "parent": {
+            "pid_type": "recid",
+            "pid_value": "6138075"
+          }
+        }
+      ]
+    }
+  },
+  "title": "Code and measurement data - Neural ordinary differential equations for grey-box modelling of lithium-ion batteries on the basis of an equivalent circuit model",
+  "links": {
+    "self": "https://zenodo.org/api/records/6323623",
+    "self_html": "https://zenodo.org/records/6323623",
+    "preview_html": "https://zenodo.org/records/6323623?preview=1",
+    "doi": "https://doi.org/10.5281/zenodo.6323623",
+    "self_doi": "https://doi.org/10.5281/zenodo.6323623",
+    "self_doi_html": "https://zenodo.org/doi/10.5281/zenodo.6323623",
+    "reserve_doi": "https://zenodo.org/api/records/6323623/draft/pids/doi",
+    "parent": "https://zenodo.org/api/records/6138075",
+    "parent_html": "https://zenodo.org/records/6138075",
+    "parent_doi": "https://doi.org/10.5281/zenodo.6138075",
+    "parent_doi_html": "https://zenodo.org/doi/10.5281/zenodo.6138075",
+    "self_iiif_manifest": "https://zenodo.org/api/iiif/record:6323623/manifest",
+    "self_iiif_sequence": "https://zenodo.org/api/iiif/record:6323623/sequence/default",
+    "files": "https://zenodo.org/api/records/6323623/files",
+    "media_files": "https://zenodo.org/api/records/6323623/media-files",
+    "latest": "https://zenodo.org/api/records/6323623/versions/latest",
+    "latest_html": "https://zenodo.org/records/6323623/latest",
+    "versions": "https://zenodo.org/api/records/6323623/versions",
+    "draft": "https://zenodo.org/api/records/6323623/draft",
+    "access_links": "https://zenodo.org/api/records/6323623/access/links",
+    "access_grants": "https://zenodo.org/api/records/6323623/access/grants",
+    "access_users": "https://zenodo.org/api/records/6323623/access/users",
+    "access_request": "https://zenodo.org/api/records/6323623/access/request",
+    "access": "https://zenodo.org/api/records/6323623/access",
+    "communities": "https://zenodo.org/api/records/6323623/communities",
+    "communities-suggestions": "https://zenodo.org/api/records/6323623/communities-suggestions",
+    "request_deletion": "https://zenodo.org/api/records/6323623/request-deletion",
+    "file_modification": "https://zenodo.org/api/records/6323623/file-modification",
+    "quota_increase": "https://zenodo.org/api/records/6323623/quota-increase",
+    "requests": "https://zenodo.org/api/records/6323623/requests"
+  },
+  "updated": "2022-04-05T13:04:10.898842+00:00",
+  "recid": "6323623",
+  "revision": 13,
+  "files": [
+    {
+      "id": "0ad52f8d-9ec5-4845-954a-ef5051282724",
+      "key": "ECM_GB_static_model.py",
+      "size": 11629,
+      "checksum": "md5:6eacc182933db8579707cd49c1b29df2",
+      "links": {
+        "self": "https://zenodo.org/api/records/6323623/files/ECM_GB_static_model.py/content"
+      }
+    },
+    {
+      "id": "d5edbd7e-4e51-4c52-920c-d208b6377c08",
+      "key": "CCCV_18A_chg.csv",
+      "size": 170791,
+      "checksum": "md5:1316bb590326e03d1eec42414a85d76c",
+      "links": {
+        "self": "https://zenodo.org/api/records/6323623/files/CCCV_18A_chg.csv/content"
+      }
+    },
+    {
+      "id": "b3403a2c-067e-4469-94d0-3a3a117849a4",
+      "key": "pulsed_chg.csv",
+      "size": 486307,
+      "checksum": "md5:22d679928f14c192b4b457015cac1fbc",
+      "links": {
+        "self": "https://zenodo.org/api/records/6323623/files/pulsed_chg.csv/content"
+      }
+    },
+    {
+      "id": "0e74d345-b765-4e7c-b91e-305b51a8db84",
+      "key": "OCV_SOC_data.csv",
+      "size": 2576220,
+      "checksum": "md5:baa250276f02666b0b17cb7d74c64382",
+      "links": {
+        "self": "https://zenodo.org/api/records/6323623/files/OCV_SOC_data.csv/content"
+      }
+    },
+    {
+      "id": "55ad6fe5-02fa-417c-8597-4cfd850545f1",
+      "key": "CCCV_50A_dis.csv",
+      "size": 81802,
+      "checksum": "md5:e588421f2bd0b44d211c32171497fcd4",
+      "links": {
+        "self": "https://zenodo.org/api/records/6323623/files/CCCV_50A_dis.csv/content"
+      }
+    },
+    {
+      "id": "6bad09f2-4a3b-4474-8399-d784c8ed3afb",
+      "key": "CCCV_180A_chg.csv",
+      "size": 120641,
+      "checksum": "md5:7b2acde2a1d5b462facf200c1ae470ae",
+      "links": {
+        "self": "https://zenodo.org/api/records/6323623/files/CCCV_180A_chg.csv/content"
+      }
+    },
+    {
+      "id": "1e7132c1-a312-4ba4-902e-07e1996796b1",
+      "key": "ECM_GB_complete.py",
+      "size": 15282,
+      "checksum": "md5:18fcab69031527858fe51ea54efda01d",
+      "links": {
+        "self": "https://zenodo.org/api/records/6323623/files/ECM_GB_complete.py/content"
+      }
+    },
+    {
+      "id": "de0cbd35-9d70-46e9-a434-657f3a6cebcd",
+      "key": "pulsed_dis.csv",
+      "size": 586319,
+      "checksum": "md5:e8973028b7aed36c37a9a43dc7f30297",
+      "links": {
+        "self": "https://zenodo.org/api/records/6323623/files/pulsed_dis.csv/content"
+      }
+    },
+    {
+      "id": "cf5669d1-1c11-4713-a2d9-657e0c42b520",
+      "key": "CCCV_180A_dis.csv",
+      "size": 33660,
+      "checksum": "md5:f983815b764aac7058087a2da473a514",
+      "links": {
+        "self": "https://zenodo.org/api/records/6323623/files/CCCV_180A_dis.csv/content"
+      }
+    },
+    {
+      "id": "ed36c558-7155-45a3-9d96-88feebc57b20",
+      "key": "halfcycles.csv",
+      "size": 2986027,
+      "checksum": "md5:9f74aae2d49afa55a754afd6a8f2c0c7",
+      "links": {
+        "self": "https://zenodo.org/api/records/6323623/files/halfcycles.csv/content"
+      }
+    },
+    {
+      "id": "c3d4e88c-ed39-48c3-bf8f-07b570f4a495",
+      "key": "CCCV_18A_dis.csv",
+      "size": 188544,
+      "checksum": "md5:bdefdfd5b129c0f17a1b5baecbf77612",
+      "links": {
+        "self": "https://zenodo.org/api/records/6323623/files/CCCV_18A_dis.csv/content"
+      }
+    },
+    {
+      "id": "5a2d84c6-4eed-4519-9c4f-8785d3384091",
+      "key": "CCCV_50A_chg.csv",
+      "size": 81729,
+      "checksum": "md5:a41d7c66be0c77ecc465c64fc4a7dad3",
+      "links": {
+        "self": "https://zenodo.org/api/records/6323623/files/CCCV_50A_chg.csv/content"
+      }
+    },
+    {
+      "id": "9d0b8381-1371-421d-8553-4e0e33109c4a",
+      "key": "loadprofile.csv",
+      "size": 2658538,
+      "checksum": "md5:2fa00da4ce60cbae4484ae4fd399a8b5",
+      "links": {
+        "self": "https://zenodo.org/api/records/6323623/files/loadprofile.csv/content"
+      }
+    }
+  ],
+  "swh": {},
+  "owners": [
+    {
+      "id": "305955"
+    }
+  ],
+  "status": "published",
+  "stats": {
+    "downloads": 2967,
+    "unique_downloads": 2538,
+    "views": 1341,
+    "unique_views": 1178,
+    "version_downloads": 2947,
+    "version_unique_downloads": 2528,
+    "version_unique_views": 951,
+    "version_views": 1069
+  },
+  "state": "done",
+  "submitted": true
+}

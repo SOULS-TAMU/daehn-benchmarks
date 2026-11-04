@@ -1,0 +1,68 @@
+{
+  "backbone": {
+    "class": "TimeScaledMLPBackbone",
+    "kwargs": {
+      "activation": "tanh",
+      "hidden_sizes": [
+        64,
+        64,
+        64,
+        64
+      ],
+      "time_scale": 7.0
+    }
+  },
+  "batch_size": 32,
+  "case_script": "11_lotka_volterra_daehn_training.py",
+  "checkpoint_file": "parameter_tree.pkl",
+  "checkpoint_sha256": "6c715980c5f5878aa49cfb7f31f8c8f570eaaee6233e495d67dea9ef8d8b5b59",
+  "derivative_steps": [
+    0.01
+  ],
+  "epochs": 5000,
+  "evaluation_data_file": "evaluation_data.npz",
+  "evaluation_data_sha256": "42b619e007c47b376b1adb2e37ead821910d62cf62ef925551c555ac63b1a3dc",
+  "example": 11,
+  "hidden_sizes": [
+    64,
+    64,
+    64,
+    64
+  ],
+  "history_file": "training_history.json",
+  "model": "daehn",
+  "model_display": "DAE-HardNet",
+  "parameter_leaf_count": 10,
+  "plot_layout": "auto",
+  "plot_state_names": [
+    "prey_x",
+    "predator_y"
+  ],
+  "plot_transform": "identity",
+  "pretrain_epochs": 1000,
+  "projected": true,
+  "projection": "fb",
+  "run_config_file": "run_config.json",
+  "run_signature": "cb532a900ccf98ce9f9151480c4c8d33ae3d3768c800c009e91e9ba9306cb1ff",
+  "schema_version": 2,
+  "seed": 55,
+  "split_info": {
+    "horizon_end": 6.968484242121061,
+    "horizon_start": 0.03151575787893947,
+    "protocol": "same_horizon",
+    "split_mode": "random",
+    "t1": 0.03151575787893947,
+    "t2": 6.968484242121061,
+    "t3": 6.968484242121061
+  },
+  "state_names": [
+    "prey_x",
+    "predator_y"
+  ],
+  "status": "trained",
+  "system": "lotka_volterra_physical_system",
+  "trainer_class": "LotkaVolterraTrainer",
+  "training_wall_seconds": 236.25033124000038,
+  "trajectory_data_file": "trajectory_data.npz",
+  "trajectory_data_sha256": "89a949f7b742ab095355f9a39c2d2a9f679bf3e5813586f9ae3ccc6af40cf887"
+}

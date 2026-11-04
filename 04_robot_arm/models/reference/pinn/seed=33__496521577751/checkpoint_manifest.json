@@ -1,0 +1,75 @@
+{
+  "backbone": {
+    "class": "TimeScaledMLPBackbone",
+    "kwargs": {
+      "activation": "tanh",
+      "hidden_sizes": [
+        64,
+        64,
+        64,
+        64
+      ],
+      "state_scales": [
+        1.0,
+        1.639739907548026,
+        1.1812149247338073
+      ],
+      "time_scale": 1.0
+    }
+  },
+  "batch_size": 32,
+  "case_script": "15_robot_arm_daehn.py",
+  "checkpoint_file": "parameter_tree.pkl",
+  "checkpoint_sha256": "3632d3857f4eb7edfe3f4c7ddba39413b5bc45457e40581b07e013bb927be333",
+  "derivative_steps": [
+    0.005
+  ],
+  "epochs": 5000,
+  "evaluation_data_file": "evaluation_data.npz",
+  "evaluation_data_sha256": "c12244f975d3ce9842a9ddd6bc7689915f1fc03646d0788de90ef70864f72894",
+  "example": 15,
+  "hidden_sizes": [
+    64,
+    64,
+    64,
+    64
+  ],
+  "history_file": "training_history.json",
+  "model": "pinn",
+  "model_display": "PINN",
+  "parameter_leaf_count": 10,
+  "plot_layout": "auto",
+  "plot_state_names": [
+    "theta1",
+    "theta2",
+    "theta3"
+  ],
+  "plot_transform": "identity",
+  "pretrain_epochs": 0,
+  "projected": false,
+  "projection": "none",
+  "run_config_file": "run_config.json",
+  "run_signature": "49652157775196d75e50b0a71f471164dbd2611403372b352c7994d599534692",
+  "schema_version": 2,
+  "seed": 33,
+  "split_info": {
+    "horizon_end": 0.984974958263773,
+    "horizon_start": 0.015025041736227046,
+    "protocol": "same_horizon",
+    "split_mode": "random",
+    "t1": 0.015025041736227046,
+    "t2": 0.984974958263773,
+    "t3": 0.984974958263773
+  },
+  "state_names": [
+    "theta1",
+    "theta2",
+    "theta3"
+  ],
+  "status": "trained",
+  "system": "robot_arm_physical_system",
+  "trainer_class": "RobotArmTrainer",
+  "training_wall_seconds": 131.3678688,
+  "trajectory_data_file": "trajectory_data.npz",
+  "trajectory_data_sha256": "a376428972c37081d9a73d93329b47917215411ad9a7ec9c3d2099d3567cb073"
+}

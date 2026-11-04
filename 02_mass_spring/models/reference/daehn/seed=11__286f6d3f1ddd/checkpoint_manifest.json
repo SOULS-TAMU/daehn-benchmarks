@@ -1,0 +1,69 @@
+{
+  "backbone": {
+    "class": "TimeScaledMLPBackbone",
+    "kwargs": {
+      "activation": "tanh",
+      "hidden_sizes": [
+        64,
+        64,
+        64,
+        64
+      ],
+      "state_scale": 1.1,
+      "time_scale": 6.283185307179586
+    }
+  },
+  "batch_size": 32,
+  "case_script": "12_mass_spring_daehn.py",
+  "checkpoint_file": "parameter_tree.pkl",
+  "checkpoint_sha256": "f7731286e2b9a91759911f595ffbc2e0f60fe021ea81cdba0301f6260bd8c9e0",
+  "derivative_steps": [
+    0.01
+  ],
+  "epochs": 5000,
+  "evaluation_data_file": "evaluation_data.npz",
+  "evaluation_data_sha256": "1374dd4ef3c45dea11ad434f3e6e5545fc1832d2dad9971c2c0b016767c34f58",
+  "example": 12,
+  "hidden_sizes": [
+    64,
+    64,
+    64,
+    64
+  ],
+  "history_file": "training_history.json",
+  "model": "daehn",
+  "model_display": "DAE-HardNet",
+  "parameter_leaf_count": 10,
+  "plot_layout": "auto",
+  "plot_state_names": [
+    "position_x",
+    "velocity_v"
+  ],
+  "plot_transform": "identity",
+  "pretrain_epochs": 1000,
+  "projected": true,
+  "projection": "fb",
+  "run_config_file": "run_config.json",
+  "run_signature": "286f6d3f1ddd3d7ede7e8a8ecaaf2b91a49369e5b0c37947bfbd1694d04fe07d",
+  "schema_version": 2,
+  "seed": 11,
+  "split_info": {
+    "horizon_end": 6.251716933353979,
+    "horizon_start": 0.03146837382560728,
+    "protocol": "same_horizon",
+    "split_mode": "random",
+    "t1": 0.03146837382560728,
+    "t2": 6.251716933353979,
+    "t3": 6.251716933353979
+  },
+  "state_names": [
+    "position_x",
+    "velocity_v"
+  ],
+  "status": "trained",
+  "system": "mass_spring_physical_system",
+  "trainer_class": "MassSpringTrainer",
+  "training_wall_seconds": 66.35757430599915,
+  "trajectory_data_file": "trajectory_data.npz",
+  "trajectory_data_sha256": "5ed24ed5c79d6d988d0906fe2e9ff5a98fe212c1b4fb9df9bf454c331461d898"
+}

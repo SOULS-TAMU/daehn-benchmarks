@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "model": "identified_affine_state_space",
+  "checkpoint_sha256": "87659fba4e128cf90ddbb8e558f584303dfa234fa39308f2c7538817e8e59988",
+  "data_sha256": "8da2ecc9dc4cf2890f8fff836ad9fa6e2859062b4d951735427f06e7099885b9",
+  "state_dimension": 4,
+  "control_dimension": 2,
+  "disturbance_dimension": 2,
+  "output_dimension": 1,
+  "sampling_interval": 0.25
+}

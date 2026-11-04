@@ -1,0 +1,60 @@
+{
+  "daehn_parameter_order": [
+    "alpha",
+    "beta",
+    "gamma",
+    "delta",
+    "invariant0"
+  ],
+  "daehn_state_order": [
+    "prey_x",
+    "predator_y",
+    "lambda_invariant"
+  ],
+  "derivative_order": [
+    "dprey_dt",
+    "dpredator_dt"
+  ],
+  "equations": {
+    "algebraic_residual": "invariant - invariant0",
+    "dx_dt": "alpha*x - beta*x*y",
+    "dy_dt": "-gamma*y + delta*x*y",
+    "invariant": "delta*x - gamma*log(x) + beta*y - alpha*log(y)"
+  },
+  "horizon": 7.0,
+  "initial_condition": {
+    "x0": 1.0,
+    "y0": 1.0
+  },
+  "invariant0": 2.0,
+  "parameters": {
+    "alpha": 1.5,
+    "beta": 1.0,
+    "delta": 1.0,
+    "gamma": 3.0
+  },
+  "problem": "lotka_volterra_invariant",
+  "samples": 2000,
+  "solver": {
+    "atol": 1e-12,
+    "function_evaluations": 1682,
+    "method": "DOP853",
+    "rtol": 1e-11,
+    "successful": true
+  },
+  "splits": {
+    "mode": "random",
+    "seed": 31,
+    "test_count": 300,
+    "train_count": 1400,
+    "validation_count": 300
+  },
+  "time_step": 0.003501750875437719,
+  "validation": {
+    "all_values_finite": true,
+    "max_abs_invariant_residual": 3.533127124200064e-10,
+    "minimum_predator_y": 0.2568309323549957,
+    "minimum_prey_x": 0.9480027221813384,
+    "rms_invariant_residual": 3.379750267637393e-11
+  }
+}

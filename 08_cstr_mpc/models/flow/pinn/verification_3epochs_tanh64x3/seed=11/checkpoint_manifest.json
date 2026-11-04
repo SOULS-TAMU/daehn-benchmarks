@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "task": "cstr_mpc_flow",
+  "model": "pinn",
+  "architecture": "anchored_local_flow_mlp_with_unprojected_rate_head",
+  "checkpoint_sha256": "728c8f2ff59f06d9344710d8b1ca49894c94e938d811012e9196d7e61484815e",
+  "data_sha256": "8da2ecc9dc4cf2890f8fff836ad9fa6e2859062b4d951735427f06e7099885b9",
+  "input_size": 8,
+  "output_size": 7,
+  "network_input_size": 9,
+  "network_output_size": 7,
+  "parameter_count": 9415,
+  "projection": "none",
+  "sampling_interval": 0.25,
+  "training_wall_seconds": 5.148501800000304
+}

@@ -1,0 +1,12 @@
+DAE-HardNet benchmarks
+
+Derived from DAE-HardNet case studies maintained by SOULS-TAMU contributors.
+Upstream: https://github.com/SOULS-TAMU/dae-hardnet
+Project code and documentation are distributed under Apache-2.0; see LICENSE.
+
+Third-party battery measurements and literature scripts retain their original
+attribution and license terms. The Zenodo source record identifies MIT licensing;
+the original literature-script MIT notices are preserved in their source files.
+OCV-SOC data attributed to Yagci et al. (2021) retain CC BY 4.0 terms.
+See DATA_SOURCES.md and 09_battery_dae/data/raw/zenodo_record.json.
+Dependencies retain their own licenses.

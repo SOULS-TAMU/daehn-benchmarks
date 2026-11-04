@@ -1,0 +1,34 @@
+{
+  "mode": "daehn",
+  "epochs": 5000,
+  "pretrain_epochs": 2000,
+  "seed": 42,
+  "hidden_sizes": [
+    64,
+    64,
+    64
+  ],
+  "time_start": 0.0,
+  "time_span": 7.0,
+  "state_mean": [
+    2.902136515124387,
+    1.458903235218283
+  ],
+  "state_scale": [
+    1.9869079798684735,
+    1.3852561119467344
+  ],
+  "taylor_step": 0.001,
+  "derivative_step": 0.001,
+  "tolerance": 1e-10,
+  "projection_iterations": 20,
+  "learning_rate": 0.001,
+  "data_weight": 1,
+  "physics_weight": 1,
+  "integral_weight": 100.0,
+  "initialize": "ones",
+  "batch_size": 128,
+  "trajectory_samples": 1000,
+  "check_reference": true,
+  "source_csv": "D:\\Projects\\daehn-benchmarks\\01_lotka_volterra\\data\\trajectory.csv"
+}

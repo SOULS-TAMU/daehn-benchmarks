@@ -1,0 +1,68 @@
+{
+  "backbone": {
+    "class": "TimeScaledMLPBackbone",
+    "kwargs": {
+      "activation": "tanh",
+      "hidden_sizes": [
+        64,
+        64,
+        64,
+        64
+      ],
+      "time_scale": 7.0
+    }
+  },
+  "batch_size": 32,
+  "case_script": "11_lotka_volterra_daehn_training.py",
+  "checkpoint_file": "parameter_tree.pkl",
+  "checkpoint_sha256": "cbbf1eb594b22ea8e43368700631cb1336a6b0348412823fcd87c7f6de8a2b53",
+  "derivative_steps": [
+    0.01
+  ],
+  "epochs": 5000,
+  "evaluation_data_file": "evaluation_data.npz",
+  "evaluation_data_sha256": "42b619e007c47b376b1adb2e37ead821910d62cf62ef925551c555ac63b1a3dc",
+  "example": 11,
+  "hidden_sizes": [
+    64,
+    64,
+    64,
+    64
+  ],
+  "history_file": "training_history.json",
+  "model": "mlp",
+  "model_display": "MLP",
+  "parameter_leaf_count": 10,
+  "plot_layout": "auto",
+  "plot_state_names": [
+    "prey_x",
+    "predator_y"
+  ],
+  "plot_transform": "identity",
+  "pretrain_epochs": 0,
+  "projected": false,
+  "projection": "none",
+  "run_config_file": "run_config.json",
+  "run_signature": "0d5b34bcc96d6f3ddb0c4fbef317d46b38959376f38be123de1216c09f9c683a",
+  "schema_version": 2,
+  "seed": 44,
+  "split_info": {
+    "horizon_end": 6.968484242121061,
+    "horizon_start": 0.03151575787893947,
+    "protocol": "same_horizon",
+    "split_mode": "random",
+    "t1": 0.03151575787893947,
+    "t2": 6.968484242121061,
+    "t3": 6.968484242121061
+  },
+  "state_names": [
+    "prey_x",
+    "predator_y"
+  ],
+  "status": "trained",
+  "system": "lotka_volterra_physical_system",
+  "trainer_class": "LotkaVolterraTrainer",
+  "training_wall_seconds": 122.3955707999994,
+  "trajectory_data_file": "trajectory_data.npz",
+  "trajectory_data_sha256": "89a949f7b742ab095355f9a39c2d2a9f679bf3e5813586f9ae3ccc6af40cf887"
+}

@@ -1,0 +1,144 @@
+{
+  "schema_version": 1,
+  "model": "identified_affine_state_space",
+  "task": "cstr_mpc_flow",
+  "equation": "x_next=A x+B u+E d+c; y=C x",
+  "sampling_interval": 0.25,
+  "sampling_interval_unit": "minutes",
+  "state_names": [
+    "C_A",
+    "C_B",
+    "C_C",
+    "theta"
+  ],
+  "control_names": [
+    "phi",
+    "q"
+  ],
+  "disturbance_names": [
+    "C_Ai",
+    "theta_i"
+  ],
+  "output_names": [
+    "C_B"
+  ],
+  "input_order": [
+    "C_A",
+    "C_B",
+    "C_C",
+    "theta",
+    "phi",
+    "q",
+    "C_Ai",
+    "theta_i"
+  ],
+  "reference_model_dir": "D:\\Projects\\daehn-benchmarks\\results\\08_cstr_mpc\\model\\flow\\daehn\\seed=11",
+  "reference_config_sha256": "8c19627c4c937c53a2becb2554f0055e46e171fca8932d340922f517210eb2ed",
+  "reference_training_seed": 11,
+  "data_sha256": "8da2ecc9dc4cf2890f8fff836ad9fa6e2859062b4d951735427f06e7099885b9",
+  "split_source": "original dataset split codes; reference confirms full training split",
+  "split_counts": {
+    "train": 9612,
+    "validation": 1099,
+    "test": 1307
+  },
+  "plant_config": {
+    "schema_version": 1,
+    "sampling_interval": 0.25,
+    "state_bounds": [
+      [
+        0.0,
+        1.2
+      ],
+      [
+        0.0,
+        1.2
+      ],
+      [
+        0.0,
+        1.2
+      ],
+      [
+        -2.0,
+        2.0
+      ]
+    ],
+    "inventory_upper": 1.2,
+    "control_bounds": [
+      [
+        0.4,
+        2.0
+      ],
+      [
+        -0.6,
+        0.6
+      ]
+    ],
+    "disturbance_bounds": [
+      [
+        0.8,
+        1.2
+      ],
+      [
+        -0.2,
+        0.2
+      ]
+    ],
+    "control_move_limits": [
+      0.1,
+      0.05
+    ],
+    "nominal_control": [
+      1.0,
+      -0.0134
+    ],
+    "nominal_state": [
+      0.2667,
+      0.5238,
+      0.1676,
+      0.0
+    ],
+    "nominal_disturbance": [
+      1.0,
+      0.0
+    ],
+    "independent_samples": 4096,
+    "linked_trajectories": 128,
+    "steps_per_trajectory": 64,
+    "interval_nodes": 11,
+    "seed": 31,
+    "split_fractions": [
+      0.8,
+      0.1,
+      0.1
+    ],
+    "solver": {
+      "method": "DOP853",
+      "rtol": 1e-10,
+      "atol": 1e-12
+    },
+    "mpc": {
+      "prediction_horizon": 40,
+      "product_B_reference": 0.5,
+      "concentration_tracking_scale": 0.1,
+      "temperature_tracking_scale": 1.0,
+      "temperature_tracking_weight": 0.05,
+      "input_deviation_weight": 0.01,
+      "input_deviation_scales": [
+        0.8,
+        0.6
+      ],
+      "input_move_weight": 0.1,
+      "terminal_tracking_weight": 2.0,
+      "measurement_assumption": "full state available; disturbances measured/forecast",
+      "terminal_set": null
+    }
+  },
+  "ridge": 0.0,
+  "objective": "mean standardized endpoint-state squared error + ridge * squared standardized slopes",
+  "solver": "numpy.linalg.lstsq; augmented least squares for ridge",
+  "learned_parameters": 36,
+  "training_wall_seconds": 0.0052199000001564855,
+  "fit_labels": "four endpoint states, from exactly the same training transitions as DAEHN",
+  "scope": "No rate projection, no stabilization, no state clipping, no controller comparison. DAEHN additionally used within-interval and derivative labels; this baseline identifies the endpoint map only."
+}
